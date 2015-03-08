@@ -1,0 +1,37 @@
+"3.8.1 (created: 2013/11/21 23:49:14)
+
+source! /home/pratyush/.vimperatorrc.local
+
+" vim: set ft=vimperator:
+
+" Minimal gui
+set gui=nonavigation
+set gui=none
+set gui=tabs
+
+" Vimium like follow links
+set hintchars=jkigasdf
+highlight Hint font:"DejaVu Sans Mono";font-size:120%;color:red;background-color:yellow;padding:2px;
+
+" Default search to I am feeling lucky
+set defsearch=lucky
+
+" Try to always switch to normal mode on page load
+set focuscontent
+
+" Set homepage
+silent open about:blank
+
+" Keybindings
+"" gb to go back to previous tab
+nmap gb :b#<CR>
+
+" Bookmarks
+silent bmark https://github.com/search?o=desc&q=%s&s=stars&type=Repositories&utf8=%E2%9C%93 -keyword github
+silent bmark https://www.youtube.com/results?search_query=%s -keyword youtube
+
+" QMarks
+silent qmark t https://twitter.com/
+silent qmark f http://fully-faltoo.com/random/
+silent qmark h https://habitrpg.com/
+silent qmark m https://mail.google.com/mail/u/0/?ui=html
